@@ -1,0 +1,12 @@
+- name: NYC
+  description: New York City
+- name: CHI
+  description: Chicago
+- name: STL
+  description: Saint Louis
+- name: DEN
+  description: Denver
+- name: PHX
+  description: Phoenix
+- name: LAX
+  description: Los Angeles
