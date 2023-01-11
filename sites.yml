@@ -1,3 +1,4 @@
+# A list of sites to load into Netbox
 - name: NYC
   description: New York City
 - name: CHI
