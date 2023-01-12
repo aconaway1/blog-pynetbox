@@ -12,7 +12,7 @@ These are files to support a series of blog posts on Pynetbox.
 
 # Utility Python Files
 
-* pynetbox_populate_sites.py
-* pynetbox_populate_devices.py
-* pynetbox_get_token.py
-* pynetbox_clear_all_tokens.py
+* pynetbox_populate_sites.py : Pulls in site info from YAML and adds them to Netbox if needed.
+* pynetbox_populate_devices.py : Pulls in device info from YAML and adds them to Netbox if needed.
+* pynetbox_get_token.py : Logs into Netbox with a user/pass, get an API token, prints it, then deletes it. This is to show how tokens can be generated dynamically.
+* pynetbox_clear_all_tokens.py : When your script dies a horrible death, the Netbox API tokens may linger. This scripts nukes all tokens except for the one generated when this script runs. It's the only way to be sure.
