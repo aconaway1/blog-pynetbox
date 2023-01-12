@@ -43,3 +43,22 @@
   site: STL
   type: GENERIC
   role: CORE_SWITCH
+- name: STL-FRW01
+  site: STL
+  type: GENERIC
+  role: FIREWALL
+  status: planned
+- name: LAX-RTR01
+  site: LAX
+  type: GENERIC
+  role: WAN_ROUTER
+  status: planned
+- name: ATL-FRW01
+  site: ATL
+  type: GENERIC
+  role: INET_ROUTER
+- name: PHX-RTR01
+  site: PHX
+  type: GENERIC
+  role: INET_ROUTER
+  status: planned

@@ -17,6 +17,10 @@ nb_conn = pynetbox.api(url=env_vars['netbox_url'])
 
 token = nb_conn.create_token(env_vars['username'], env_vars['password'])
 
+valid_devices_status = []
+for choice in nb_conn.dcim.devices.choices()['status']:
+    valid_devices_status.append(choice['value'])
+
 for device in devices_to_load:
     name = device['name'].upper()
     slug = device['name'].lower()
@@ -48,10 +52,17 @@ for device in devices_to_load:
         print(f"The site {site} does not exist. Skipping.")
         continue
     
-    print(f"Adding {device['name']} to Netbox.")
+    
     constructed_device = {"name": name, "slug": slug, "site": queried_site.id, "device_role": queried_role.id, "device_type": queried_type.id}
     if "description" in device.keys():
         constructed_device['description'] = device['description']
+    if "status" in device.keys():
+        if device['status'] in valid_devices_status:
+            constructed_device['status'] = device['status']
+        else:
+            print(f"The status of {device['status']} isn't valid. Skipping.")
+            continue
+    print(f"Adding {device['name']} to Netbox.")
     result = nb_conn.dcim.devices.create(**constructed_device)
     
 token.delete()
