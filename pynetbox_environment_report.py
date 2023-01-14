@@ -1,5 +1,5 @@
 """
-Deletes all API tokens from Netbox
+Generates a summary of the Python and Netbox environment to include in blog posts
 """
 import pynetbox
 import yaml

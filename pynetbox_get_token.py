@@ -1,3 +1,6 @@
+"""
+Demonstrates getting a new token from Netbox
+"""
 import pynetbox
 import pprint
 import yaml

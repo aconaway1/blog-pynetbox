@@ -1,3 +1,6 @@
+"""
+Deletes all API tokens from Netbox
+"""
 import pynetbox
 import yaml
 
