@@ -1,7 +1,9 @@
+"""
+Deletes all API tokens from Netbox
+"""
 import pynetbox
 import yaml
 import sys
-import pprint
 
 ENV_FILE = "env.yml"
 
