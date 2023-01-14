@@ -10,8 +10,7 @@ from datetime import datetime
 
 ENV_FILE = "env.yml"
 
-# TOKEN_AGE_LIMIT = 1209600  # 2 weeks in seconds
-TOKEN_AGE_LIMIT = 15
+TOKEN_AGE_LIMIT = 1209600  # 2 weeks in seconds
 NOW_TIME = datetime.now()
 
 with open(ENV_FILE) as file:
