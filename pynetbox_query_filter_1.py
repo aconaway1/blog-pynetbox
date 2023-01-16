@@ -25,4 +25,8 @@ for site in sites:
     for device in devices:
         print(f"{device.name:^20} {device.device_role.name:^20}")
         
+        
+acc_switches = nb_conn.dcim.devices.filter(role="acc_switch")
+for a in acc_switches:
+    print(a)
 token.delete()

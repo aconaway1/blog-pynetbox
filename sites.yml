@@ -1,13 +1,19 @@
 # A list of sites to load into Netbox
 - name: NYC
   description: New York City
+  physical_address: "123 Main Street\nNew York, NY 10001"
 - name: CHI
   description: Chicago
+  physical_address: "123 Main Street\nChicago, IL 60007"
 - name: STL
   description: Saint Louis
+  physical_address: "123 Main Street\nSaint Louis, MO 63101"
 - name: DEN
   description: Denver
+  physical_address: "123 Main Street\nDenver, CO 80014"
 - name: PHX
   description: Phoenix
+  physical_address: "123 Main Street\nPhoenix, AZ 73901"
 - name: LAX
   description: Los Angeles
+  physical_address: "123 Main Street\nLos Angeles, CA 90001"
