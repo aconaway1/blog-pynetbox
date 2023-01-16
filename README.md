@@ -4,6 +4,7 @@ These are files to support a series of blog posts on Pynetbox.
 
 * **pynetbox_query_filter_1.py** : This file shows all the devices in Netbox grouped by site. It queries Netbox for all sites, then queries devices by those sites using `filter`.
 * **pynetbox_query_filter_2.py** : This does the same as _1 but only shows those devices with a `planned` status.
+* **pynetbox_query_filter_3.py** : This prints shipping labels for all planned devices. The exercise here is the difference between `filter` and `get` when querying Netbox.
 
 # YAML Files
 
