@@ -63,6 +63,6 @@ for device in devices_to_load:
             print(f"The status of {device['status']} isn't valid. Skipping.")
             continue
     print(f"Adding {device['name']} to Netbox.")
-    result = nb_conn.dcim.devices.create(**constructed_device)
+    result = nb_conn.dcim.devices.create(constructed_device)
     
 token.delete()

@@ -30,6 +30,6 @@ for site in sites_to_load:
         constructed_site['description'] = site['description']
     if "physical_address" in site.keys():
         constructed_site['physical_address'] = site['physical_address']
-    result = nb_conn.dcim.sites.create(**constructed_site)
+    result = nb_conn.dcim.sites.create(constructed_site)
     
 token.delete()
