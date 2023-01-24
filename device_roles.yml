@@ -1,0 +1,10 @@
+- name: ACC_SWITCH
+  slug: acc_switch
+- name: CORE_SWITCH
+  slug: core_switch
+- name: FIREWALL
+  slug: firewall
+- name: INET_ROUTER
+  slug: inet_router
+- name: WAN_ROUTER
+  slug: wan_router
