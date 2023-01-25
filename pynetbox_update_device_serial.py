@@ -28,7 +28,6 @@ token = nb_conn.create_token(env_vars['username'], env_vars['password'])
 
 for device in devices_to_update:
     print(f"Scraping {device['name']} for update.")
-    # Build a dictionary for Netmiko to use to connect to the devices
     dev_conn = {
         'device_type': 'mikrotik_routeros',
         'host': device['mgmt_ip'],

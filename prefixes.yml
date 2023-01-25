@@ -1,0 +1,82 @@
+global:
+  - name: WAN
+    prefix: 172.16.0.0/24
+sites:
+  - name: NYC
+    container_prefixes:
+      - prefix: 10.0.0.0/16
+    vlans:
+      - vid: 100
+        name: mgmt
+        prefix: 10.0.0.0/24
+      - vid: 101
+        name: users
+        prefix: 10.0.1.0/24
+      - vid: 102
+        name: servers
+        prefix: 10.0.2.0/24
+  - name: CHI
+    container_prefixes:
+      - prefix: 10.1.0.0/16
+    vlans:
+      - vid: 100
+        name: mgmt
+        prefix: 10.1.0.0/24
+      - vid: 101
+        name: users
+        prefix: 10.1.1.0/24
+      - vid: 102
+        name: servers
+        prefix: 10.1.2.0/24
+  - name: STL
+    container_prefixes:
+      - prefix: 10.2.0.0/16
+    vlans:
+      - vid: 100
+        name: mgmt
+        prefix: 10.2.0.0/24
+      - vid: 101
+        name: users
+        prefix: 10.2.1.0/24
+      - vid: 102
+        name: servers
+        prefix: 10.2.2.0/24
+  - name: DEN
+    container_prefixes:
+      - prefix: 10.3.0.0/16
+    vlans:
+      - vid: 100
+        name: mgmt
+        prefix: 10.3.0.0/24
+      - vid: 101
+        name: users
+        prefix: 10.3.1.0/24
+      - vid: 102
+        name: servers
+        prefix: 10.3.2.0/24
+  - name: PHX
+    container_prefixes:
+      - prefix: 10.4.0.0/16
+    vlans:
+      - vid: 100
+        name: mgmt
+        prefix: 10.4.0.0/24
+      - vid: 101
+        name: users
+        prefix: 10.4.1.0/24
+      - vid: 102
+        name: servers
+        prefix: 10.4.2.0/24
+  - name: LAX
+    container_prefixes:
+      - prefix: 10.5.0.0/16
+    vlans:
+      - vid: 100
+        name: mgmt
+        prefix: 10.5.0.0/24
+      - vid: 101
+        name: users
+        prefix: 10.5.1.0/24
+      - vid: 102
+        name: servers
+        prefix: 10.5.2.0/24
