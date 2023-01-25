@@ -27,8 +27,8 @@ for site in sites_to_load:
     for key in site.keys():
         if site[key] != queried_site[key]:
             are_they_different = True
-            print("looks like it's different. Will update.")
     if are_they_different:
+        print("looks like it's different. Will update.")
         queried_site.update(site)
     else:
         print("seems to be the same.")
