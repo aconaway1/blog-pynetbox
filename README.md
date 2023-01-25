@@ -5,6 +5,8 @@ These are files to support a series of blog posts on Pynetbox.
 * **pynetbox_query_filter_1.py** : This file shows all the devices in Netbox grouped by site. It queries Netbox for all sites, then queries devices by those sites using `filter`.
 * **pynetbox_query_filter_2.py** : This does the same as _1 but only shows those devices with a `planned` status.
 * **pynetbox_query_filter_3.py** : This prints shipping labels for all planned devices. The exercise here is the difference between `filter` and `get` when querying Netbox.
+* **pynetbox_update_sites.py** : Updates site information based on the `sites.yml`.
+* **pynetbox_update_device_serial.py** : Updates device serial numbers by logging into the device, scraping that informatin, then pushing that to Netbox.
 
 # YAML Files
 
@@ -12,6 +14,7 @@ These are files to support a series of blog posts on Pynetbox.
 * **sites.yml** : This file contains the list of sites that Netbox should include. See `pynetbox_populate_sites.py`.
 * **devices.yml** : This is where you'll find the devices that should be in Netbox. See `pynetbox_populate_devices.py`.
 * **device_roles.yml** : This contains the names and slugs of the device roles to add to Netbox. See `pynetbox_populate_device_roles.py`.
+* **devices_to_update.yml** : This is a list of device names and IPs to be used by `pynetbox_update_device_serial.py` to update the serial number.
 * **prefixes.yml** : Used by `pynetbox_populate_prefixes.py` to get prefixes and VLANs configured. Something like this.
 
 ```
