@@ -12,13 +12,33 @@ These are files to support a series of blog posts on Pynetbox.
 * **sites.yml** : This file contains the list of sites that Netbox should include. See `pynetbox_populate_sites.py`.
 * **devices.yml** : This is where you'll find the devices that should be in Netbox. See `pynetbox_populate_devices.py`.
 * **device_roles.yml** : This contains the names and slugs of the device roles to add to Netbox. See `pynetbox_populate_device_roles.py`.
+* **prefixes.yml** : Used by `pynetbox_populate_prefixes.py` to get prefixes and VLANs configured. Something like this.
 
+```
+{'global': [{'name': 'WAN', 'prefix': '172.16.0.0/24'}],
+ 'sites': [{'container_prefixes': [{'prefix': '10.0.0.0/16'}],
+            'name': 'NYC',
+            'vlans': [{'name': 'mgmt', 'prefix': '10.0.0.0/24', 'vid': 100},
+                      {'name': 'users', 'prefix': '10.0.1.0/24', 'vid': 101},
+                      {'name': 'servers',
+                       'prefix': '10.0.2.0/24',
+                       'vid': 102}]},
+           {'container_prefixes': [{'prefix': '10.1.0.0/16'}],
+            'name': 'CHI',
+            'vlans': [{'name': 'mgmt', 'prefix': '10.1.0.0/24', 'vid': 100},
+                      {'name': 'users', 'prefix': '10.1.1.0/24', 'vid': 101},
+                      {'name': 'servers',
+                       'prefix': '10.1.2.0/24',
+                       'vid': 102}]},
+<SNIP>
+```
 # Utility Python Files
 
 * **pynetbox_populate_sites.py**: Pulls in site info from YAML and adds them to Netbox if needed.
 * **pynetbox_populate_devices.py**: Pulls in device info from YAML and adds them to Netbox if needed.
 * **pynetbox_populate_device_roles.py**: Pulls in device role into from YAML and adds them to Netbox if needed.
 * **pynetbox_populate_device_types.py**: Just puts a manufacturer called `GENERIC` in Netbox with a model of `GENERIC`. This is all hardcoded.
+* **pynetbox_populate_prefixes.py**: VLAN and prefixes go from YAML to Netbox. Includes a way to have global prefixes (i.e., to what location and VLAN does the WAN belong?) and site-specific container prefixes.
 * **pynetbox_get_choices.py**: Gets a list of valid statuses for devices in Netbox. This is used to validate input from a YAML file (or wherever).
 * **pynetbox_get_token.py**: Logs into Netbox with a user/pass, get an API token, prints it, then deletes it. This is to show how tokens can be generated dynamically.
 * **pynetbox_clear_all_tokens.py**: When your script dies a horrible death, the Netbox API tokens may linger. This scripts nukes all tokens except for the one generated when this script runs. It's the only way to be sure.
