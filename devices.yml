@@ -3,23 +3,32 @@
   site: CHI
   type: GENERIC
   role: INET_ROUTER
-- name: LAX-FRW01
-  site: LAX
-  type: GENERIC
-  role: FIREWALL
-- name: STL-ASW01
-  site: STL
-  type: GENERIC
-  role: ACC_SWITCH
-- name: PHX-CSW01
-  site: PHX
-  type: GENERIC
-  role: CORE_SWITCH
-- name: DEN-RTR01
-  site: DEN
+- name: CHI-RTR02
+  site: CHI
   type: GENERIC
   role: WAN_ROUTER
-- name: NYC-FRW01
+- name: CHI-FWL01
+  site: CHI
+  type: GENERIC
+  role: FIREWALL
+- name: CHI-CSW01
+  site: CHI
+  type: GENERIC
+  role: CORE_SWITCH
+- name: CHI-ASW01
+  site: CHI
+  type: GENERIC
+  role: ACC_SWITCH
+  
+- name: NYC-RTR01
+  site: NYC
+  type: GENERIC
+  role: INET_ROUTER
+- name: NYC-RTR02
+  site: NYC
+  type: GENERIC
+  role: WAN_ROUTER
+- name: NYC-FWL01
   site: NYC
   type: GENERIC
   role: FIREWALL
@@ -27,38 +36,91 @@
   site: NYC
   type: GENERIC
   role: CORE_SWITCH
-- name: CHI-CSW01
-  site: CHI
+- name: NYC-ASW01
+  site: NYC
   type: GENERIC
-  role: CORE_SWITCH
-- name: DEN-CSW01
-  site: DEN
+  role: ACC_SWITCH
+
+- name: STL-RTR01
+  site: STL
   type: GENERIC
-  role: CORE_SWITCH
-- name: LAX-CSW01
-  site: LAX
+  role: INET_ROUTER
+- name: STL-RTR02
+  site: STL
   type: GENERIC
-  role: CORE_SWITCH
+  role: WAN_ROUTER
+- name: STL-FWL01
+  site: STL
+  type: GENERIC
+  role: FIREWALL
 - name: STL-CSW01
   site: STL
   type: GENERIC
   role: CORE_SWITCH
-- name: STL-FRW01
+- name: STL-ASW01
   site: STL
   type: GENERIC
-  role: FIREWALL
-  status: planned
-- name: LAX-RTR01
-  site: LAX
-  type: GENERIC
-  role: WAN_ROUTER
-  status: planned
-- name: ATL-FRW01
-  site: ATL
+  role: ACC_SWITCH
+
+- name: DEN-RTR01
+  site: DEN
   type: GENERIC
   role: INET_ROUTER
+- name: DEN-RTR02
+  site: DEN
+  type: GENERIC
+  role: WAN_ROUTER
+- name: DEN-FWL01
+  site: DEN
+  type: GENERIC
+  role: FIREWALL
+- name: DEN-CSW01
+  site: DEN
+  type: GENERIC
+  role: CORE_SWITCH
+- name: DEN-ASW01
+  site: DEN
+  type: GENERIC
+  role: ACC_SWITCH
+
 - name: PHX-RTR01
   site: PHX
   type: GENERIC
   role: INET_ROUTER
-  status: planned
+- name: PHX-RTR02
+  site: PHX
+  type: GENERIC
+  role: WAN_ROUTER
+- name: PHX-FWL01
+  site: PHX
+  type: GENERIC
+  role: FIREWALL
+- name: PHX-CSW01
+  site: PHX
+  type: GENERIC
+  role: CORE_SWITCH
+- name: PHX-ASW01
+  site: PHX
+  type: GENERIC
+  role: ACC_SWITCH
+
+- name: LAX-RTR01
+  site: LAX
+  type: GENERIC
+  role: INET_ROUTER
+- name: LAX-RTR02
+  site: LAX
+  type: GENERIC
+  role: WAN_ROUTER
+- name: LAX-FWL01
+  site: LAX
+  type: GENERIC
+  role: FIREWALL
+- name: LAX-CSW01
+  site: LAX
+  type: GENERIC
+  role: CORE_SWITCH
+- name: LAX-ASW01
+  site: LAX
+  type: GENERIC
+  role: ACC_SWITCH
