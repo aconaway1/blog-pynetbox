@@ -1,5 +1,5 @@
 """
-Deletes all API tokens from Netbox
+Deletes devices from Netbox after an indicated date in the description field
 """
 import re
 from datetime import datetime
