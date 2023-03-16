@@ -6,7 +6,6 @@ SITES_FILE = "sites.yml"
 LOG_FILE = "check_sites.log"
 LOG_FORMAT = '%(asctime)s - %(levelname)s - %(message)s'
 
-# SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
 CREDS_FILE = "device_creds.yml"
 SLACK_LEVEL = logging.DEBUG
 
