@@ -1,5 +1,5 @@
 - name: PHX-RTR01
   mgmt_ip: 172.22.0.1
-  manufacturer: mikrotik
+  # manufacturer: mikrotik_routeros
   device_role: inet_router
   status: active
