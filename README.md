@@ -8,6 +8,7 @@ These are files to support a series of blog posts on Pynetbox.
 * **pynetbox_update_sites.py** : Updates site information based on the `sites.yml`.
 * **pynetbox_update_device_serial.py** : Updates device serial numbers by logging into the device, scraping that informatin, then pushing that to Netbox.
 * **catalog_ip_addresses.py** : Logs into a device, pings the IPs in question, checks the ARP table, then makes sure they are all in Netbox.
+* **pynetbox_gen_diagram.py** : Queries Netbox for prefixes and IP addresses to create a dynamic network diagram.
 
 # YAML Files
 
@@ -44,6 +45,7 @@ These are files to support a series of blog posts on Pynetbox.
 * **pynetbox_populate_device_roles.py**: Pulls in device role into from YAML and adds them to Netbox if needed.
 * **pynetbox_populate_device_types.py**: Just puts a manufacturer called `GENERIC` in Netbox with a model of `GENERIC`. This is all hardcoded.
 * **pynetbox_populate_prefixes.py**: VLAN and prefixes go from YAML to Netbox. Includes a way to have global prefixes (i.e., to what location and VLAN does the WAN belong?) and site-specific container prefixes.
+* **pynetbox_populate_interfaces.py**: Adds interfaces and IP addresses (optinally) to Netbox via YAML file.
 * **pynetbox_get_choices.py**: Gets a list of valid statuses for devices in Netbox. This is used to validate input from a YAML file (or wherever).
 * **pynetbox_get_token.py**: Logs into Netbox with a user/pass, get an API token, prints it, then deletes it. This is to show how tokens can be generated dynamically.
 * **pynetbox_clear_all_tokens.py**: When your script dies a horrible death, the Netbox API tokens may linger. This scripts nukes all tokens except for the one generated when this script runs. It's the only way to be sure.

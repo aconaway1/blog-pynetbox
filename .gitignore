@@ -4,3 +4,6 @@ DOING
 CHANGES
 device_creds.yml
 *.log
+*.gv
+*.pdf
+*.png

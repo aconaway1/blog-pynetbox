@@ -1,0 +1,133 @@
+# NYC
+- device: NYC-FWL01
+  interfaces:
+    - name: TUNNEL0
+      address: 172.16.0.10/24
+    - name: TRANSIT
+      address: 10.0.0.1/24
+- device: NYC-CSW01
+  interfaces:
+    - name: TRANSIT
+      address: 10.0.0.2/24
+    - name: WAN
+      address: 10.0.1.1/24
+- device: NYC-RTR01
+  interfaces:
+    - name: WAN
+      address: 10.0.1.11
+- device: NYC-RTR02
+  interfaces:
+    - name: WAN
+      address: 10.0.1.12
+
+# CHI
+- device: CHI-FWL01
+  interfaces:
+    - name: TUNNEL0
+      type: virtual
+      address: 172.16.0.11/24
+    - name: TRANSIT
+      type: virtual
+      address: 10.1.0.1/24
+- device: CHI-CSW01
+  interfaces:
+    - name: TRANSIT
+      address: 10.1.0.2/24
+    - name: WAN
+      address: 10.1.1.1/24
+- device: CHI-RTR01
+  interfaces:
+    - name: WAN
+      address: 10.1.1.11
+- device: CHI-RTR02
+  interfaces:
+    - name: WAN
+      address: 10.1.1.12
+
+# STL
+- device: STL-FWL01
+  interfaces:
+    - name: TUNNEL0
+      address: 172.16.0.12/24
+    - name: TRANSIT
+      address: 10.2.0.1/24
+- device: STL-CSW01
+  interfaces:
+    - name: TRANSIT
+      address: 10.2.0.2/24
+    - name: WAN
+      address: 10.2.1.1/24
+- device: STL-RTR01
+  interfaces:
+    - name: WAN
+      address: 10.2.1.11
+- device: STL-RTR02
+  interfaces:
+    - name: WAN
+      address: 10.2.1.12
+
+# DEN
+- device: DEN-FWL01
+  interfaces:
+    - name: TUNNEL0
+      address: 172.16.0.13/24
+    - name: TRANSIT
+      address: 10.3.0.1/24
+- device: DEN-CSW01
+  interfaces:
+    - name: TRANSIT
+      address: 10.3.0.2/24
+    - name: WAN
+      address: 10.3.1.1/24
+- device: DEN-RTR01
+  interfaces:
+    - name: WAN
+      address: 10.3.1.11
+- device: DEN-RTR02
+  interfaces:
+    - name: WAN
+      address: 10.3.1.12
+
+# PHX
+- device: PHX-FWL01
+  interfaces:
+    - name: TUNNEL0
+      address: 172.16.0.14/24
+    - name: TRANSIT
+      address: 10.4.0.1/24
+- device: PHX-CSW01
+  interfaces:
+    - name: TRANSIT
+      address: 10.4.0.2/24
+    - name: WAN
+      address: 10.4.1.1/24
+- device: PHX-RTR01
+  interfaces:
+    - name: WAN
+      address: 10.4.1.11
+- device: PHX-RTR02
+  interfaces:
+    - name: WAN
+      address: 10.4.1.12
+
+# LAX
+- device: LAX-FWL01
+  interfaces:
+    - name: TUNNEL0
+      address: 172.16.0.15/24
+    - name: TRANSIT
+      address: 10.5.0.1/24
+- device: LAX-CSW01
+  interfaces:
+    - name: TRANSIT
+      address: 10.5.0.2/24
+    - name: WAN
+      address: 10.5.1.1/24
+- device: LAX-RTR01
+  interfaces:
+    - name: WAN
+      address: 10.5.1.11
+- device: LAX-RTR02
+  interfaces:
+    - name: WAN
+      address: 10.5.1.12
