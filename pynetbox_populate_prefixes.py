@@ -37,9 +37,9 @@ for global_container in prefixes_to_load['global']:
     prefix_to_add = {
         "status": "active",
         "prefix": global_container['prefix'],
-        "description": global_container['name'].upper()
+        "description": global_container['name'].upper(),
     }
-    print(f"Adding prefix {vlan['prefix']} to {site['name']}.")
+    print(f"Adding prefix {global_container['prefix']} to {global_container['name']}.")
     # Add the prefix
     new_prefix = nb_conn.ipam.prefixes.create(prefix_to_add)
 

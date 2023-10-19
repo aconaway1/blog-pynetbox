@@ -19,7 +19,7 @@
   site: CHI
   type: GENERIC
   role: ACC_SWITCH
-  
+
 - name: NYC-RTR01
   site: NYC
   type: GENERIC

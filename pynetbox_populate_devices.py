@@ -53,7 +53,7 @@ for device in devices_to_load:
         continue
     
     
-    constructed_device = {"name": name, "slug": slug, "site": queried_site.id, "device_role": queried_role.id, "device_type": queried_type.id}
+    constructed_device = {"name": name, "slug": slug, "site": queried_site.id, "role": queried_role.id, "device_type": queried_type.id}
     if "description" in device.keys():
         constructed_device['description'] = device['description']
     if "status" in device.keys():
