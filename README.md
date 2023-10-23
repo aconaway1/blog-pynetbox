@@ -50,3 +50,6 @@ These are files to support a series of blog posts on Pynetbox.
 * **pynetbox_clear_old_tokens.py**: Delete all the keys that are older than TOKEN_AGE_LIMIT
 * **pynetbox_environment_report.py**: Print a summary of the Python and Netbox versions to include in a blog post
 * **vault_reference.py**: A quick-and-dirty script to do some Hashicorp Vault stuff for POC.
+
+# Contact
+Aaron is on Mastodon at https://masto.ai/@aconaway.
